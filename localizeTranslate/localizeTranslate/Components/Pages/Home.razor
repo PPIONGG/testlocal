@@ -1,0 +1,230 @@
+﻿@page "/"
+@inject IJSRuntime JS
+
+<div class="container">
+    <header>
+        <div class="header-content">
+            <div class="profile-image">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect width='300' height='300' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='80' fill='%23666'%3ETR%3C/text%3E%3C/svg%3E" alt="Thanakon Ruchikanchanarat">
+            </div>
+
+            <div class="header-text">
+                <h1>THANAKON<br>RUCHIKANCHANARAT</h1>
+                <p class="subtitle">Full Stack Developer</p>
+                <p class="summary">
+                    A highly motivated and passionate programmer with a Bachelor's degree in Computer Science...
+                </p>
+
+                <div class="contact-info">
+                    <div class="contact-item"><span>093-0560310</span></div>
+                    <div class="contact-item">
+                        <a href="mailto:bitelion9909@gmail.com">bitelion9909@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://github.com/liondev" target="_blank">GitHub: liondev</a>
+                    </div>
+                    <div class="contact-item"><span>Lopburi, Thailand</span></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    @* ===== Work Experience ===== *@
+    <section>
+        <h2 class="section-title">Work Experience</h2>
+
+        <div class="experience-grid">
+            @foreach (var job in Jobs)
+            {
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="job-title">@job.Title</h3>
+                            <p class="company">@job.Company</p>
+                        </div>
+                        <span class="period">@job.Period</span>
+                    </div>
+
+                    <ul>
+                        @foreach (var detail in job.Details)
+                        {
+                            <li>@detail</li>
+                        }
+                    </ul>
+                </div>
+            }
+        </div>
+    </section>
+
+    @* ===== Projects ===== *@
+    <section>
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            @foreach (var project in Projects)
+            {
+                <div class="project-card">
+                    <h3 class="project-title">@project.Title</h3>
+                    <p class="project-year">@project.Year</p>
+                    <p class="project-description">@project.Description</p>
+                </div>
+            }
+        </div>
+    </section>
+
+    @* ===== Skills ===== *@
+    <section>
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-container">
+            @foreach (var category in Skills)
+            {
+                <div class="skill-category">
+                    <h3 class="skill-category-title">@category.Name</h3>
+                    <div class="skill-tags">
+                        @foreach (var skill in category.Items)
+                        {
+                            <span class="skill-tag">@skill</span>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+
+    @* ===== Education ===== *@
+    <section>
+        <h2 class="section-title">Education</h2>
+
+        @foreach (var edu in Education)
+        {
+            <div class="education-card">
+                <h3 class="degree">@edu.Degree</h3>
+                <p class="institution">@edu.School</p>
+                <p class="education-period">@edu.Period</p>
+            </div>
+        }
+    </section>
+
+    <footer>
+        <p>© 2026 Thanakon Ruchikanchanarat. All rights reserved.</p>
+        <p><a href="https://github.com/liondev" target="_blank">View GitHub Profile</a></p>
+    </footer>
+</div>
+
+<script>
+    window.portfolio = {
+        init: function () {
+
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Intersection Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            document.querySelectorAll('.experience-card, .project-card, .education-card')
+                .forEach(card => observer.observe(card));
+        }
+    };
+
+</script>
+
+@code {
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("portfolio.init");
+        }
+    }
+
+    List<Job> Jobs = new()
+    {
+        new Job
+        {
+            Title = "Administrative Officer",
+            Company = "Rattanakit Farm",
+            Period = "2566-2568",
+            Details = new()
+            {
+                "Utilized Microsoft Excel...",
+                "Oversaw implementation of farm management system..."
+            }
+        },
+        new Job
+        {
+            Title = "Out Source Full Stack Developer",
+            Company = "Soft Inter Chiangmai",
+            Period = "2565-2566",
+            Details = new()
+            {
+                "Developed ERP system with SSRS...",
+                "Built using Angular and C#..."
+            }
+        }
+    };
+
+    List<Project> Projects = new()
+    {
+        new Project { Title="Bootcamp Project", Year="2568", Description="Multiple projects including E-Commerce..." }
+    };
+
+    List<SkillCategory> Skills = new()
+    {
+        new SkillCategory { Name="Tech Skills", Items=new(){ "HTML","CSS","JavaScript","React","Angular","C#"} },
+        new SkillCategory { Name="Databases", Items=new(){ "MongoDB"} }
+    };
+
+    List<EducationItem> Education = new()
+    {
+        new EducationItem { Degree="Bachelor's Degree in Computer Science", School="Naresuan University", Period="2562-2565"}
+    };
+
+    class Job
+    {
+        public string Title { get; set; }
+        public string Company { get; set; }
+        public string Period { get; set; }
+        public List<string> Details { get; set; }
+    }
+
+    class Project
+    {
+        public string Title { get; set; }
+        public string Year { get; set; }
+        public string Description { get; set; }
+    }
+
+    class SkillCategory
+    {
+        public string Name { get; set; }
+        public List<string> Items { get; set; }
+    }
+
+    class EducationItem
+    {
+        public string Degree { get; set; }
+        public string School { get; set; }
+        public string Period { get; set; }
+    }
+}
