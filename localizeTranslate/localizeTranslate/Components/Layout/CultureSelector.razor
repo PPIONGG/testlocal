@@ -2,14 +2,26 @@
 
 @{
     var currentCulture = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+    var currentPath = "/";
 }
 
-<div class="culture-selector">
-    <select onchange="window.location.href='/Culture/Set?culture=' + this.value + '&redirectUri=' + encodeURIComponent(window.location.pathname)">
-        <option value="en" selected="@(currentCulture == "en")">English</option>
-        <option value="th" selected="@(currentCulture == "th")">ไทย</option>
-        <option value="zh" selected="@(currentCulture == "zh")">中文</option>
-        <option value="ja" selected="@(currentCulture == "ja")">日本語</option>
-        <option value="ko" selected="@(currentCulture == "ko")">한국어</option>
-    </select>
+<div class="dropdown">
+    <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="bi bi-globe2 me-1"></i>
+        @(currentCulture switch
+        {
+            "th" => "ไทย",
+            "zh" => "中文",
+            "ja" => "日本語",
+            "ko" => "한국어",
+            _ => "EN"
+        })
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+        <li><a class="dropdown-item @(currentCulture == "en" ? "active" : "")" href="/Culture/Set?culture=en&redirectUri=@currentPath">English</a></li>
+        <li><a class="dropdown-item @(currentCulture == "th" ? "active" : "")" href="/Culture/Set?culture=th&redirectUri=@currentPath">ไทย</a></li>
+        <li><a class="dropdown-item @(currentCulture == "zh" ? "active" : "")" href="/Culture/Set?culture=zh&redirectUri=@currentPath">中文</a></li>
+        <li><a class="dropdown-item @(currentCulture == "ja" ? "active" : "")" href="/Culture/Set?culture=ja&redirectUri=@currentPath">日本語</a></li>
+        <li><a class="dropdown-item @(currentCulture == "ko" ? "active" : "")" href="/Culture/Set?culture=ko&redirectUri=@currentPath">한국어</a></li>
+    </ul>
 </div>
