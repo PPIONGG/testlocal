@@ -1,0 +1,46 @@
+{
+  "jobs": [
+    {
+      "title": "事務担当者",
+      "company": "Rattanakit Farm",
+      "period": "2023-2025",
+      "details": [
+        "Microsoft Excelを使用したデータ管理とレポート作成",
+        "農場管理システムの導入を監督"
+      ]
+    },
+    {
+      "title": "外部委託フルスタック開発者",
+      "company": "Soft Inter Chiangmai",
+      "period": "2022-2023",
+      "details": [
+        "SSRSレポート付きERPシステムを開発",
+        "AngularとC# .NETで構築"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "ブートキャンププロジェクト",
+      "year": "2025",
+      "description": "Eコマースウェブアプリケーションを含む複数のプロジェクト"
+    }
+  ],
+  "skills": [
+    {
+      "name": "技術スキル",
+      "items": ["HTML", "CSS", "JavaScript", "React", "Angular", "C#"]
+    },
+    {
+      "name": "データベース",
+      "items": ["MongoDB"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "コンピュータサイエンス学士号",
+      "school": "ナレースワン大学",
+      "period": "2019-2022"
+    }
+  ]
+}

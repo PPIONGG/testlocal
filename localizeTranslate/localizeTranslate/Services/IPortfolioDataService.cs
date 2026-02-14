@@ -8,6 +8,14 @@ public interface IPortfolioDataService
     List<EducationItem> GetEducation();
 }
 
+public class PortfolioLocaleData
+{
+    public List<Job> Jobs { get; set; } = new();
+    public List<Project> Projects { get; set; } = new();
+    public List<SkillCategory> Skills { get; set; } = new();
+    public List<EducationItem> Education { get; set; } = new();
+}
+
 public class Job
 {
     public string Title { get; set; } = "";

@@ -1,0 +1,46 @@
+{
+  "jobs": [
+    {
+      "title": "Administrative Officer",
+      "company": "Rattanakit Farm",
+      "period": "2023-2025",
+      "details": [
+        "Utilized Microsoft Excel for data management and reporting",
+        "Oversaw implementation of farm management system"
+      ]
+    },
+    {
+      "title": "Outsource Full Stack Developer",
+      "company": "Soft Inter Chiangmai",
+      "period": "2022-2023",
+      "details": [
+        "Developed ERP system with SSRS reporting",
+        "Built using Angular and C# .NET"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Bootcamp Project",
+      "year": "2025",
+      "description": "Multiple projects including E-Commerce web application"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Tech Skills",
+      "items": ["HTML", "CSS", "JavaScript", "React", "Angular", "C#"]
+    },
+    {
+      "name": "Databases",
+      "items": ["MongoDB"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor's Degree in Computer Science",
+      "school": "Naresuan University",
+      "period": "2019-2022"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "jobs": [
+    {
+      "title": "행정 담당자",
+      "company": "Rattanakit Farm",
+      "period": "2023-2025",
+      "details": [
+        "Microsoft Excel을 활용한 데이터 관리 및 보고",
+        "농장 관리 시스템 구현 감독"
+      ]
+    },
+    {
+      "title": "외주 풀스택 개발자",
+      "company": "Soft Inter Chiangmai",
+      "period": "2022-2023",
+      "details": [
+        "SSRS 보고 기능이 포함된 ERP 시스템 개발",
+        "Angular와 C# .NET으로 구축"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "부트캠프 프로젝트",
+      "year": "2025",
+      "description": "전자상거래 웹 애플리케이션을 포함한 다수의 프로젝트"
+    }
+  ],
+  "skills": [
+    {
+      "name": "기술 스킬",
+      "items": ["HTML", "CSS", "JavaScript", "React", "Angular", "C#"]
+    },
+    {
+      "name": "데이터베이스",
+      "items": ["MongoDB"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "컴퓨터 과학 학사",
+      "school": "나레수안 대학교",
+      "period": "2019-2022"
+    }
+  ]
+}

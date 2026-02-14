@@ -1,0 +1,46 @@
+{
+  "jobs": [
+    {
+      "title": "เจ้าหน้าที่ธุรการ",
+      "company": "รัตนกิจฟาร์ม",
+      "period": "2566-2568",
+      "details": [
+        "ใช้ Microsoft Excel ในการจัดการข้อมูลและจัดทำรายงาน",
+        "ดูแลการนำระบบจัดการฟาร์มมาใช้งาน"
+      ]
+    },
+    {
+      "title": "นักพัฒนา Full Stack (Outsource)",
+      "company": "ซอฟต์ อินเตอร์ เชียงใหม่",
+      "period": "2565-2566",
+      "details": [
+        "พัฒนาระบบ ERP พร้อมระบบรายงาน SSRS",
+        "สร้างด้วย Angular และ C# .NET"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "โปรเจค Bootcamp",
+      "year": "2568",
+      "description": "หลายโปรเจครวมถึงเว็บแอปพลิเคชัน E-Commerce"
+    }
+  ],
+  "skills": [
+    {
+      "name": "ทักษะด้านเทคนิค",
+      "items": ["HTML", "CSS", "JavaScript", "React", "Angular", "C#"]
+    },
+    {
+      "name": "ฐานข้อมูล",
+      "items": ["MongoDB"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "ปริญญาตรี สาขาวิทยาการคอมพิวเตอร์",
+      "school": "มหาวิทยาลัยนเรศวร",
+      "period": "2562-2565"
+    }
+  ]
+}

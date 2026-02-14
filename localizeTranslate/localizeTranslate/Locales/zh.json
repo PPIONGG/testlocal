@@ -1,0 +1,46 @@
+{
+  "jobs": [
+    {
+      "title": "行政专员",
+      "company": "Rattanakit Farm",
+      "period": "2023-2025",
+      "details": [
+        "使用Microsoft Excel进行数据管理和报告",
+        "监督农场管理系统的实施"
+      ]
+    },
+    {
+      "title": "外包全栈开发工程师",
+      "company": "Soft Inter Chiangmai",
+      "period": "2022-2023",
+      "details": [
+        "开发带有SSRS报告的ERP系统",
+        "使用Angular和C# .NET构建"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "训练营项目",
+      "year": "2025",
+      "description": "多个项目，包括电子商务网站应用"
+    }
+  ],
+  "skills": [
+    {
+      "name": "技术技能",
+      "items": ["HTML", "CSS", "JavaScript", "React", "Angular", "C#"]
+    },
+    {
+      "name": "数据库",
+      "items": ["MongoDB"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "计算机科学学士学位",
+      "school": "纳黎萱大学",
+      "period": "2019-2022"
+    }
+  ]
+}
