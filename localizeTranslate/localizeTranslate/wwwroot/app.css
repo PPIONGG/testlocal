@@ -1,23 +1,243 @@
-html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+/* ===== Base ===== */
+:root {
+    --color-primary: #2563eb;
+    --color-primary-light: rgba(37, 99, 235, 0.08);
+    --color-text: #1e293b;
+    --color-text-muted: #64748b;
+    --color-bg: #ffffff;
+    --color-bg-alt: #f8fafc;
+    --color-border: #e2e8f0;
 }
 
+html, body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    scroll-behavior: smooth;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    padding: 0.75rem 0;
+    transition: box-shadow 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.15rem;
+    letter-spacing: -0.02em;
+}
+
+.navbar .nav-link {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    padding: 0.5rem 1rem !important;
+    border-radius: 0.5rem;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--color-primary);
+    background-color: var(--color-primary-light);
+}
+
+/* ===== Hero Section ===== */
+.hero-section {
+    padding: 5rem 0 4rem;
+    background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
+}
+
+.profile-avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primary), #3b82f6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 40px rgba(37, 99, 235, 0.2);
+}
+
+.profile-avatar span {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.05em;
+}
+
+.hero-name {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--color-text);
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.hero-summary {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* ===== Contact Chips ===== */
+.contact-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.85rem;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 2rem;
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.contact-chip:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+    color: var(--color-primary);
+}
+
+.contact-chip i {
+    font-size: 0.85rem;
+}
+
+/* ===== Content Sections ===== */
+.content-section {
+    padding: 4rem 0;
+}
+
+.section-alt {
+    background-color: var(--color-bg-alt);
+}
+
+.section-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.section-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--color-primary);
+    border-radius: 2px;
+}
+
+/* ===== Cards ===== */
+.card-hover {
+    border-radius: 0.75rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.5s ease, box-shadow 0.2s ease, opacity 0.5s ease;
+}
+
+.card-hover.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* ===== Skill Badges ===== */
+.skill-badge {
+    display: inline-block;
+    padding: 0.45rem 1rem;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-text);
+    transition: all 0.2s ease;
+}
+
+.skill-badge:hover {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.letter-spacing {
+    letter-spacing: 0.08em;
+}
+
+/* ===== Section fade-in ===== */
+.content-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.content-section.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== Footer ===== */
+footer {
+    border-top: 1px solid var(--color-border);
+}
+
+footer a {
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+footer a:hover {
+    color: #1d4ed8;
+}
+
+/* ===== Weather page table ===== */
+.table {
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.table thead th {
+    background-color: var(--color-bg-alt);
+    border-bottom: 2px solid var(--color-border);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+}
+
+/* ===== Blazor defaults ===== */
 a, .btn-link {
-    color: #006bb7;
+    color: var(--color-primary);
 }
 
 .btn-primary {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-.content {
-    padding-top: 1.1rem;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem var(--color-primary);
 }
 
 h1:focus {
@@ -42,19 +262,10 @@ h1:focus {
     color: white;
 }
 
-    .blazor-error-boundary::after {
-        content: "An error has occurred."
-    }
+.blazor-error-boundary::after {
+    content: "An error has occurred."
+}
 
 .darker-border-checkbox.form-check-input {
     border-color: #929292;
-}
-
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-    color: var(--bs-secondary-color);
-    text-align: end;
-}
-
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-    text-align: start;
 }
