@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <data name="Nav_Home" xml:space="preserve"><value>Home</value></data>
+  <data name="Nav_Counter" xml:space="preserve"><value>Counter</value></data>
+  <data name="Nav_Weather" xml:space="preserve"><value>Weather</value></data>
+  <data name="Section_WorkExperience" xml:space="preserve"><value>Work Experience</value></data>
+  <data name="Section_Projects" xml:space="preserve"><value>Projects</value></data>
+  <data name="Section_Skills" xml:space="preserve"><value>Skills</value></data>
+  <data name="Section_Education" xml:space="preserve"><value>Education</value></data>
+  <data name="Header_Subtitle" xml:space="preserve"><value>Full Stack Developer</value></data>
+  <data name="Header_Summary" xml:space="preserve"><value>A highly motivated and passionate programmer with a Bachelor's degree in Computer Science...</value></data>
+  <data name="Footer_Copyright" xml:space="preserve"><value>© 2026 Thanakon Ruchikanchanarat. All rights reserved.</value></data>
+  <data name="Footer_ViewGitHub" xml:space="preserve"><value>View GitHub Profile</value></data>
+  <data name="Header_Location" xml:space="preserve"><value>Lopburi, Thailand</value></data>
+  <data name="Weather_Title" xml:space="preserve"><value>Weather</value></data>
+  <data name="Weather_Description" xml:space="preserve"><value>This component demonstrates showing data.</value></data>
+  <data name="Weather_Loading" xml:space="preserve"><value>Loading...</value></data>
+  <data name="Weather_Date" xml:space="preserve"><value>Date</value></data>
+  <data name="Weather_TempC" xml:space="preserve"><value>Temp. (C)</value></data>
+  <data name="Weather_TempF" xml:space="preserve"><value>Temp. (F)</value></data>
+  <data name="Weather_Summary" xml:space="preserve"><value>Summary</value></data>
+  <data name="Error_Unhandled" xml:space="preserve"><value>An unhandled error has occurred.</value></data>
+  <data name="Error_Reload" xml:space="preserve"><value>Reload</value></data>
+</root>

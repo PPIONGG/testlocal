@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <data name="Nav_Home" xml:space="preserve"><value>首页</value></data>
+  <data name="Nav_Counter" xml:space="preserve"><value>计数器</value></data>
+  <data name="Nav_Weather" xml:space="preserve"><value>天气</value></data>
+  <data name="Section_WorkExperience" xml:space="preserve"><value>工作经历</value></data>
+  <data name="Section_Projects" xml:space="preserve"><value>项目</value></data>
+  <data name="Section_Skills" xml:space="preserve"><value>技能</value></data>
+  <data name="Section_Education" xml:space="preserve"><value>教育背景</value></data>
+  <data name="Header_Subtitle" xml:space="preserve"><value>全栈开发工程师</value></data>
+  <data name="Header_Summary" xml:space="preserve"><value>一位充满热情和积极性的程序员，拥有计算机科学学士学位...</value></data>
+  <data name="Footer_Copyright" xml:space="preserve"><value>© 2026 Thanakon Ruchikanchanarat. 版权所有。</value></data>
+  <data name="Footer_ViewGitHub" xml:space="preserve"><value>查看GitHub主页</value></data>
+  <data name="Header_Location" xml:space="preserve"><value>华富里, 泰国</value></data>
+  <data name="Weather_Title" xml:space="preserve"><value>天气</value></data>
+  <data name="Weather_Description" xml:space="preserve"><value>此组件演示数据展示功能。</value></data>
+  <data name="Weather_Loading" xml:space="preserve"><value>加载中...</value></data>
+  <data name="Weather_Date" xml:space="preserve"><value>日期</value></data>
+  <data name="Weather_TempC" xml:space="preserve"><value>温度 (C)</value></data>
+  <data name="Weather_TempF" xml:space="preserve"><value>温度 (F)</value></data>
+  <data name="Weather_Summary" xml:space="preserve"><value>概况</value></data>
+  <data name="Error_Unhandled" xml:space="preserve"><value>发生了未处理的错误。</value></data>
+  <data name="Error_Reload" xml:space="preserve"><value>重新加载</value></data>
+</root>

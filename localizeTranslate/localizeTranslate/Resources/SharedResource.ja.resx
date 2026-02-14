@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <data name="Nav_Home" xml:space="preserve"><value>ホーム</value></data>
+  <data name="Nav_Counter" xml:space="preserve"><value>カウンター</value></data>
+  <data name="Nav_Weather" xml:space="preserve"><value>天気</value></data>
+  <data name="Section_WorkExperience" xml:space="preserve"><value>職務経歴</value></data>
+  <data name="Section_Projects" xml:space="preserve"><value>プロジェクト</value></data>
+  <data name="Section_Skills" xml:space="preserve"><value>スキル</value></data>
+  <data name="Section_Education" xml:space="preserve"><value>学歴</value></data>
+  <data name="Header_Subtitle" xml:space="preserve"><value>フルスタック開発者</value></data>
+  <data name="Header_Summary" xml:space="preserve"><value>コンピュータサイエンスの学士号を持つ、意欲的で情熱的なプログラマー...</value></data>
+  <data name="Footer_Copyright" xml:space="preserve"><value>© 2026 Thanakon Ruchikanchanarat. All rights reserved.</value></data>
+  <data name="Footer_ViewGitHub" xml:space="preserve"><value>GitHubプロフィールを見る</value></data>
+  <data name="Header_Location" xml:space="preserve"><value>ロッブリー, タイ</value></data>
+  <data name="Weather_Title" xml:space="preserve"><value>天気</value></data>
+  <data name="Weather_Description" xml:space="preserve"><value>このコンポーネントはデータ表示のデモです。</value></data>
+  <data name="Weather_Loading" xml:space="preserve"><value>読み込み中...</value></data>
+  <data name="Weather_Date" xml:space="preserve"><value>日付</value></data>
+  <data name="Weather_TempC" xml:space="preserve"><value>気温 (C)</value></data>
+  <data name="Weather_TempF" xml:space="preserve"><value>気温 (F)</value></data>
+  <data name="Weather_Summary" xml:space="preserve"><value>概要</value></data>
+  <data name="Error_Unhandled" xml:space="preserve"><value>処理されないエラーが発生しました。</value></data>
+  <data name="Error_Reload" xml:space="preserve"><value>再読み込み</value></data>
+</root>

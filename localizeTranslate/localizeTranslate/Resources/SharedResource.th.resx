@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <data name="Nav_Home" xml:space="preserve"><value>หน้าหลัก</value></data>
+  <data name="Nav_Counter" xml:space="preserve"><value>ตัวนับ</value></data>
+  <data name="Nav_Weather" xml:space="preserve"><value>สภาพอากาศ</value></data>
+  <data name="Section_WorkExperience" xml:space="preserve"><value>ประสบการณ์ทำงาน</value></data>
+  <data name="Section_Projects" xml:space="preserve"><value>โปรเจค</value></data>
+  <data name="Section_Skills" xml:space="preserve"><value>ทักษะ</value></data>
+  <data name="Section_Education" xml:space="preserve"><value>การศึกษา</value></data>
+  <data name="Header_Subtitle" xml:space="preserve"><value>นักพัฒนา Full Stack</value></data>
+  <data name="Header_Summary" xml:space="preserve"><value>โปรแกรมเมอร์ที่มีแรงจูงใจสูงและหลงใหลในการเขียนโปรแกรม จบปริญญาตรีสาขาวิทยาการคอมพิวเตอร์...</value></data>
+  <data name="Footer_Copyright" xml:space="preserve"><value>© 2569 ธนกร รุจิกาญจนรัตน์ สงวนลิขสิทธิ์</value></data>
+  <data name="Footer_ViewGitHub" xml:space="preserve"><value>ดูโปรไฟล์ GitHub</value></data>
+  <data name="Header_Location" xml:space="preserve"><value>ลพบุรี, ประเทศไทย</value></data>
+  <data name="Weather_Title" xml:space="preserve"><value>สภาพอากาศ</value></data>
+  <data name="Weather_Description" xml:space="preserve"><value>คอมโพเนนต์นี้แสดงตัวอย่างการโหลดข้อมูล</value></data>
+  <data name="Weather_Loading" xml:space="preserve"><value>กำลังโหลด...</value></data>
+  <data name="Weather_Date" xml:space="preserve"><value>วันที่</value></data>
+  <data name="Weather_TempC" xml:space="preserve"><value>อุณหภูมิ (C)</value></data>
+  <data name="Weather_TempF" xml:space="preserve"><value>อุณหภูมิ (F)</value></data>
+  <data name="Weather_Summary" xml:space="preserve"><value>สรุป</value></data>
+  <data name="Error_Unhandled" xml:space="preserve"><value>เกิดข้อผิดพลาดที่ไม่สามารถจัดการได้</value></data>
+  <data name="Error_Reload" xml:space="preserve"><value>โหลดใหม่</value></data>
+</root>

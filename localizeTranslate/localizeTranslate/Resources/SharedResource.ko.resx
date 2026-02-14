@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <data name="Nav_Home" xml:space="preserve"><value>홈</value></data>
+  <data name="Nav_Counter" xml:space="preserve"><value>카운터</value></data>
+  <data name="Nav_Weather" xml:space="preserve"><value>날씨</value></data>
+  <data name="Section_WorkExperience" xml:space="preserve"><value>경력 사항</value></data>
+  <data name="Section_Projects" xml:space="preserve"><value>프로젝트</value></data>
+  <data name="Section_Skills" xml:space="preserve"><value>기술</value></data>
+  <data name="Section_Education" xml:space="preserve"><value>학력</value></data>
+  <data name="Header_Subtitle" xml:space="preserve"><value>풀스택 개발자</value></data>
+  <data name="Header_Summary" xml:space="preserve"><value>컴퓨터 과학 학사 학위를 보유한 의욕적이고 열정적인 프로그래머...</value></data>
+  <data name="Footer_Copyright" xml:space="preserve"><value>© 2026 Thanakon Ruchikanchanarat. All rights reserved.</value></data>
+  <data name="Footer_ViewGitHub" xml:space="preserve"><value>GitHub 프로필 보기</value></data>
+  <data name="Header_Location" xml:space="preserve"><value>롭부리, 태국</value></data>
+  <data name="Weather_Title" xml:space="preserve"><value>날씨</value></data>
+  <data name="Weather_Description" xml:space="preserve"><value>이 컴포넌트는 데이터 표시를 보여줍니다.</value></data>
+  <data name="Weather_Loading" xml:space="preserve"><value>로딩 중...</value></data>
+  <data name="Weather_Date" xml:space="preserve"><value>날짜</value></data>
+  <data name="Weather_TempC" xml:space="preserve"><value>온도 (C)</value></data>
+  <data name="Weather_TempF" xml:space="preserve"><value>온도 (F)</value></data>
+  <data name="Weather_Summary" xml:space="preserve"><value>요약</value></data>
+  <data name="Error_Unhandled" xml:space="preserve"><value>처리되지 않은 오류가 발생했습니다.</value></data>
+  <data name="Error_Reload" xml:space="preserve"><value>새로고침</value></data>
+</root>

@@ -1,5 +1,7 @@
-﻿@page "/"
+@page "/"
 @inject IJSRuntime JS
+@inject IStringLocalizer<localizeTranslate.SharedResource> L
+@inject IPortfolioDataService PortfolioData
 
 <div class="container">
     <header>
@@ -10,10 +12,8 @@
 
             <div class="header-text">
                 <h1>THANAKON<br>RUCHIKANCHANARAT</h1>
-                <p class="subtitle">Full Stack Developer</p>
-                <p class="summary">
-                    A highly motivated and passionate programmer with a Bachelor's degree in Computer Science...
-                </p>
+                <p class="subtitle">@L["Header_Subtitle"]</p>
+                <p class="summary">@L["Header_Summary"]</p>
 
                 <div class="contact-info">
                     <div class="contact-item"><span>093-0560310</span></div>
@@ -23,7 +23,7 @@
                     <div class="contact-item">
                         <a href="https://github.com/liondev" target="_blank">GitHub: liondev</a>
                     </div>
-                    <div class="contact-item"><span>Lopburi, Thailand</span></div>
+                    <div class="contact-item"><span>@L["Header_Location"]</span></div>
                 </div>
             </div>
         </div>
@@ -31,10 +31,10 @@
 
     @* ===== Work Experience ===== *@
     <section>
-        <h2 class="section-title">Work Experience</h2>
+        <h2 class="section-title">@L["Section_WorkExperience"]</h2>
 
         <div class="experience-grid">
-            @foreach (var job in Jobs)
+            @foreach (var job in PortfolioData.GetJobs())
             {
                 <div class="experience-card">
                     <div class="experience-header">
@@ -58,9 +58,9 @@
 
     @* ===== Projects ===== *@
     <section>
-        <h2 class="section-title">Projects</h2>
+        <h2 class="section-title">@L["Section_Projects"]</h2>
         <div class="projects-grid">
-            @foreach (var project in Projects)
+            @foreach (var project in PortfolioData.GetProjects())
             {
                 <div class="project-card">
                     <h3 class="project-title">@project.Title</h3>
@@ -73,9 +73,9 @@
 
     @* ===== Skills ===== *@
     <section>
-        <h2 class="section-title">Skills</h2>
+        <h2 class="section-title">@L["Section_Skills"]</h2>
         <div class="skills-container">
-            @foreach (var category in Skills)
+            @foreach (var category in PortfolioData.GetSkills())
             {
                 <div class="skill-category">
                     <h3 class="skill-category-title">@category.Name</h3>
@@ -92,9 +92,9 @@
 
     @* ===== Education ===== *@
     <section>
-        <h2 class="section-title">Education</h2>
+        <h2 class="section-title">@L["Section_Education"]</h2>
 
-        @foreach (var edu in Education)
+        @foreach (var edu in PortfolioData.GetEducation())
         {
             <div class="education-card">
                 <h3 class="degree">@edu.Degree</h3>
@@ -105,8 +105,8 @@
     </section>
 
     <footer>
-        <p>© 2026 Thanakon Ruchikanchanarat. All rights reserved.</p>
-        <p><a href="https://github.com/liondev" target="_blank">View GitHub Profile</a></p>
+        <p>@L["Footer_Copyright"]</p>
+        <p><a href="https://github.com/liondev" target="_blank">@L["Footer_ViewGitHub"]</a></p>
     </footer>
 </div>
 
@@ -156,75 +156,5 @@
         {
             await JS.InvokeVoidAsync("portfolio.init");
         }
-    }
-
-    List<Job> Jobs = new()
-    {
-        new Job
-        {
-            Title = "Administrative Officer",
-            Company = "Rattanakit Farm",
-            Period = "2566-2568",
-            Details = new()
-            {
-                "Utilized Microsoft Excel...",
-                "Oversaw implementation of farm management system..."
-            }
-        },
-        new Job
-        {
-            Title = "Out Source Full Stack Developer",
-            Company = "Soft Inter Chiangmai",
-            Period = "2565-2566",
-            Details = new()
-            {
-                "Developed ERP system with SSRS...",
-                "Built using Angular and C#..."
-            }
-        }
-    };
-
-    List<Project> Projects = new()
-    {
-        new Project { Title="Bootcamp Project", Year="2568", Description="Multiple projects including E-Commerce..." }
-    };
-
-    List<SkillCategory> Skills = new()
-    {
-        new SkillCategory { Name="Tech Skills", Items=new(){ "HTML","CSS","JavaScript","React","Angular","C#"} },
-        new SkillCategory { Name="Databases", Items=new(){ "MongoDB"} }
-    };
-
-    List<EducationItem> Education = new()
-    {
-        new EducationItem { Degree="Bachelor's Degree in Computer Science", School="Naresuan University", Period="2562-2565"}
-    };
-
-    class Job
-    {
-        public string Title { get; set; }
-        public string Company { get; set; }
-        public string Period { get; set; }
-        public List<string> Details { get; set; }
-    }
-
-    class Project
-    {
-        public string Title { get; set; }
-        public string Year { get; set; }
-        public string Description { get; set; }
-    }
-
-    class SkillCategory
-    {
-        public string Name { get; set; }
-        public List<string> Items { get; set; }
-    }
-
-    class EducationItem
-    {
-        public string Degree { get; set; }
-        public string School { get; set; }
-        public string Period { get; set; }
     }
 }
